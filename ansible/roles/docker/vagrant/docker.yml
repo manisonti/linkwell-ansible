@@ -1,0 +1,7 @@
+- hosts: all
+  roles:
+  - { role: docker }
+  - { role: aws-developer, dev_user: vagrant }
+  post_tasks:
+  - name: Add vagrant user to docker group
+    user: name=vagrant group=docker

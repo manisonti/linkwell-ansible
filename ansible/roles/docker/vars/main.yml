@@ -1,0 +1,6 @@
+---
+pip_packages:
+- name: ansible
+  version: 2.2.1.0
+- name: docker-py
+  version: 1.10.6

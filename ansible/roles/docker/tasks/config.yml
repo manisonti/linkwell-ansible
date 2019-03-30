@@ -1,0 +1,8 @@
+---
+- name: Configure docker-storage
+  template: src=docker-storage.j2 dest=/etc/sysconfig/docker-storage
+  notify: restart docker
+
+- name: Configure docker
+  template: src=docker.j2 dest=/etc/sysconfig/docker
+  notify: restart docker
